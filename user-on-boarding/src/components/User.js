@@ -7,11 +7,13 @@ function User({ details }) {
 
   return (
     <div className='user'>
-      {!!details.avatar && <img src={details.avatar} alt='' />}
-      <h2>
-        {details.first_name} {details.last_name}
-      </h2>
-      <p>Email: {details.email}</p>
+      {!!details.avatar && <img className='user-image' src={details.avatar} alt='' />}
+      <div className='user-details'>
+        <h2>
+          {details.first_name} {details.last_name}
+        </h2>
+        <p>Email: {details.email}</p>
+      </div>
     </div>
   );
 }

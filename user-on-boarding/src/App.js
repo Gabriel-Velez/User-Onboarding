@@ -96,9 +96,11 @@ function App() {
         errors={formErrors}
       />
 
-      {users.map((user, idx) => {
-        return <User key={idx} details={user} />;
-      })}
+      <div className='users-wrapper'>
+        {users.map((user, idx) => {
+          return <User key={idx} details={user} />;
+        })}
+      </div>
     </div>
   );
 }

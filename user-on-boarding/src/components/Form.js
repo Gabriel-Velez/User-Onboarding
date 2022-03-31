@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,38 +19,49 @@ export default function FriendForm(props) {
 
   return (
     <form onSubmit={onSubmit}>
-      <div>
-        <h2>Log in!</h2>
+      <div className='form-wrapper'>
+        <h1>Log in!</h1>
         <div className='form'>
-          <label>
-            Name
-            <FontAwesomeIcon icon={faUser} />
-            <input value={values.first_name} onChange={onChange} name='first_name' type='text' />
-            <input value={values.last_name} onChange={onChange} name='last_name' type='text' />
-          </label>
-
-          <label>
-            Email
-            <FontAwesomeIcon icon={faEnvelope} />
+          <label>Name</label>
+          <div className='input-line'>
+            <FontAwesomeIcon className='form-icon' icon={faUser} />
+            <input
+              value={values.first_name}
+              onChange={onChange}
+              name='first_name'
+              type='text'
+              placeholder='First'
+            />
+            <input
+              value={values.last_name}
+              onChange={onChange}
+              name='last_name'
+              type='text'
+              placeholder='Last'
+            />
+          </div>
+          <label>Email</label>
+          <div className='input-line'>
+            <FontAwesomeIcon className='form-icon' icon={faEnvelope} />
             <input value={values.email} onChange={onChange} name='email' type='text' />
-          </label>
-          <label>
-            Password
-            <FontAwesomeIcon icon={faLock} />
+          </div>
+          <label>Password</label>
+          <div className='input-line'>
+            <FontAwesomeIcon className='form-icon' icon={faLock} />
             <input value={values.password} onChange={onChange} name='password' type='password' />
-          </label>
-          <label>
-            Terms of Service
+          </div>
+          <div className='input-line tos'>
+            <label>Terms of Service</label>
             <input checked={values.tos} onChange={onChange} name='tos' type='checkbox' />
-          </label>
+          </div>
         </div>
+        <button disabled={disabled}>submit</button>
         <div className='errors'>
           <div>{errors.username}</div>
           <div>{errors.email}</div>
           <div>{errors.password}</div>
           <div>{errors.tos}</div>
         </div>
-        <button disabled={disabled}>submit</button>
       </div>
     </form>
   );
