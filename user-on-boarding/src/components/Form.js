@@ -57,7 +57,8 @@ export default function FriendForm(props) {
         </div>
         <button disabled={disabled}>submit</button>
         <div className='errors'>
-          <div>{errors.username}</div>
+          <div>{errors.first_name}</div>
+          <div>{errors.last_name}</div>
           <div>{errors.email}</div>
           <div>{errors.password}</div>
           <div>{errors.tos}</div>
