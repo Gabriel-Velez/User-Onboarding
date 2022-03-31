@@ -15,11 +15,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-h2,
-p {
-  margin: 0;
-}
-
 .App {
   width: clamp(500px, 500px, 100vw);
   border-radius: 10px;
@@ -40,6 +35,11 @@ p {
 
 .user-details {
   flex-grow: 2;
+}
+
+.user-details h2,
+.user-details p {
+  margin: 0;
 }
 
 .user-details a,
@@ -90,7 +90,7 @@ p {
   margin-top: 20px;
 }
 
-button {
+.form-wrapper button {
   border-radius: 8px;
   background-color: #eb6053;
   border: none;
@@ -100,10 +100,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.form-wrapper button:hover {
   background-color: #f08076;
 }
-button:disabled {
+
+.form-wrapper button:disabled {
   background-color: rgb(189, 189, 189);
   cursor: not-allowed;
   color: rgb(94, 94, 94);
