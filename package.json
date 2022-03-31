@@ -6,5 +6,8 @@
     "axios": "^0.26.1",
     "styled-components": "^5.3.5",
     "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.3"
   }
 }

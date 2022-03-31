@@ -33,6 +33,9 @@ code {
   padding-bottom: 25px;
   border-bottom: dotted 1px #eb6053;
 }
+.user:last-child {
+  border-bottom: none;
+}
 
 .user-details {
   flex-grow: 2;
