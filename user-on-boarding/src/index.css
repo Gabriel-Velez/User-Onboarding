@@ -9,6 +9,7 @@ body {
   justify-content: center;
   background-color: #eb6053;
   min-height: 100vh;
+  padding: 20px;
 }
 
 code {
