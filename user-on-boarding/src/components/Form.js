@@ -55,13 +55,15 @@ export default function FriendForm(props) {
             <input checked={values.tos} onChange={onChange} name='tos' type='checkbox' />
           </div>
         </div>
-        <button disabled={disabled}>submit</button>
+        <button id='submitBtn' disabled={disabled}>
+          submit
+        </button>
         <div className='errors'>
-          <div>{errors.first_name}</div>
-          <div>{errors.last_name}</div>
-          <div>{errors.email}</div>
-          <div>{errors.password}</div>
-          <div>{errors.tos}</div>
+          <div id='firstNameError'>{errors.first_name}</div>
+          <div id='lastNameError'>{errors.last_name}</div>
+          <div id='emailError'>{errors.email}</div>
+          <div id='passwordError'>{errors.password}</div>
+          <div id='tosError'>{errors.tos}</div>
         </div>
       </div>
     </form>
